@@ -2,6 +2,14 @@ plugins {
     id 'java'
 }
 
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'pl.bartek.java.game2048.Main'
+        )
+    }
+}
+
 group 'pl.bartek.java.game2048'
 version '1.0-SNAPSHOT'
 
