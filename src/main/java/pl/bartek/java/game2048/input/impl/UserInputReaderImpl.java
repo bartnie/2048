@@ -23,9 +23,10 @@ public class UserInputReaderImpl implements UserInputReader {
     private char getProperInput() {
         try {
             System.out.println("Please provide direction using letters w,s,a,d: ");
-            final char charToCheck = reader.readLine().charAt(0);
-            if (allowedChars.contains(charToCheck)) {
-                return charToCheck;
+            final String input = reader.readLine();
+            if (input.length() > 0 &&
+                    allowedChars.contains(input.charAt(0))) {
+                return input.charAt(0);
             } else return getProperInput();
 
         } catch (IOException e) {
